@@ -1,5 +1,4 @@
-
- Get-Process |
+Get-Process |
      Where-Object { $_.WS -gt 150MB } |
      Sort-Object -Property WS -Descending |
      Select-Object -First 20 Name, Id,
