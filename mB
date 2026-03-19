@@ -1,8 +1,8 @@
-Get-Process | 
-  Sort-Object -Property WS -Descending | 
-   Select-Object -First 20 Name, Id, 
-    @{Name='RAM(MB)';Expression={[math]::Round($_.WS/1MB,2)}},
-    @{Name='Path';Expression={$_.Path}} | 
-  Format-Table -AutoSize 
 
-
+ Get-Process |
+     Where-Object { $_.WS -gt 150MB } |
+     Sort-Object -Property WS -Descending |
+     Select-Object -First 20 Name, Id,
+         @{Name='RAM(MB)';Expression={[math]::Round($_.WS/1MB,2)}},
+         @{Name='Path';Expression={$_.Path}} |
+     Format-Table -AutoSize
