@@ -1,2 +1,3 @@
-Get-EventLog -LogName System -Message *description*
-  Select-Object -3 days- 
+$Begin = Get-Date -Date '3/17/2026 08:00:00'
+$End = Get-Date -Date '3/19/2026 08:00:00'
+Get-EventLog -LogName System -EntryType Error -After $Begin -Before $End
