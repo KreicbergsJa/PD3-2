@@ -1,0 +1,6 @@
+$mp = Get-MpComputerStatus
+$procenti = 100
+if (-not $mp.RealTimeProtectionEnabled) { $procenti -= 50 }
+if ($mp.AntivirusSignatureAge -gt 3) { $procenti -= 20 }
+if ($mp.QuickScanAge -gt 7) { $procenti -= 20 }
+"Sistemas drosibas reitings: $score / 100"
