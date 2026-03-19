@@ -1,2 +1,2 @@
 Get-EventLog -LogName System -Message *description*
-  
+  Select-Object -3 days- 
