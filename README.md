@@ -1,2 +1,2 @@
-# PD3-2
-Jānis Eduards Kreicbergs DT1-2
+#  parbaudes-darbs
+Jānis Eduards Kreicbergs DT2-2
