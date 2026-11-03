@@ -1,1 +1,11 @@
+skaits = {1}
 
+with open("sistema.log", encoding="utf-8") as f:
+    for rinda in f:
+        limenis = rinda.split()[2]
+        if limenis in skaits:
+            skaits[limenis] += 1
+        else:
+            skaits[limenis] = 1
+for limenis, skaits_sk in sorted(skaits.itmes(), key=lambda x: x(1), reverse+true):
+    print(f"{limenis}: {skaits_sk}")
