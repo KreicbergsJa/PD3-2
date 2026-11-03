@@ -1,13 +1,6 @@
-import pandas as pd
+
 $pturetie = Get-Service |
     Where-Object { $_.Status -eq "Stopped" } |
     Sort-Object Name |
     Select-Object Name, Status
-
-df = pd.DataFrame(data={
-    'col1':["output1","output2","output3"],
-    'col2':["output1.1","output2.2","output3.3"]
-    })
-
-df.to_excel("excel_name.xlsx",sheet_name="sheet_name",index=False)
-
+Install-Module -Name ImportExcel
